@@ -366,7 +366,7 @@ body {
 
     .letterBtns {
         width: 90vw;
-        margin-left: 5vw;
+        margin-left: 2vw;
         gap: 5px;
     }
 
@@ -428,7 +428,7 @@ body {
 @media screen and (max-width: 400px) {
     
     #gameDiv {
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 48% 52%;
     }
 
     #category {
@@ -443,7 +443,7 @@ body {
 
     .letterDiv {
         width: 20px;
-        height: 30px;
+        height: 26px;
         font-size: 20px;
         padding-bottom: 0;
     }
@@ -461,5 +461,10 @@ body {
     .hangmanImg {
         height: 40vh;
         width: auto;
+        margin-left: 5vw;
+    }
+
+    #endMsg {
+        margin-left: 0;
     }
 }
