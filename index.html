@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" />
+    <script type="module" src="hangman.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hangman</title>
+</head>
+<body>
+    <div id="gameDiv">
+        <div>
+            <img src="images/HangmanTitle.png" class="mobileTitle" />
+            <div class="imgContainer">
+                <div id="endMsg">
+                    <div id="msgTxt"></div>
+                    <div id="wordWas"></div>
+                    <div id="newGameBtn"></div>
+                </div>
+                <div id="hangmanImg">
+                    <img src="images/guess0.png" id="img0" class="hangmanImg"/>
+                    <img src="images/guess1.png" id="img1" class="hangmanImg"/>
+                    <img src="images/guess2.png" id="img2" class="hangmanImg"/>
+                    <img src="images/guess3.png" id="img3" class="hangmanImg"/>
+                    <img src="images/guess4.png" id="img4" class="hangmanImg"/>
+                    <img src="images/guess5.png" id="img5" class="hangmanImg"/>
+                    <img src="images/guess6.png" id="img6" class="hangmanImg"/>
+                    <img src="images/guess7.png" id="img7" class="hangmanImg"/>
+                    <img src="images/guess8.png" id="img8" class="hangmanImg"/>
+                </div>
+            </div>
+        </div>
+        <div class="wordDiv">
+            <div>
+                <img src="images/HangmanTitle.png" class="title" />
+                <div id="category"></div>
+                <div id="wordSpace"></div>
+            </div>
+            <div id="letterBtns"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,465 @@
+body {
+    background-image: url('images/southparkbackground.png');
+    background-size: cover;
+}
+
+.letterBtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 550px;
+}
+
+.letterBtn {
+    background-color: rgb(198, 198, 198);
+    text-align: center;
+    padding: 10px;
+    min-width: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#gameDiv {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    column-gap: 10px;
+}
+
+.wordDiv {
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+#endMsg {
+    display: block;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 150px;
+    z-index: 10;
+    box-shadow: 2px 2px 5px 2px rgba(17, 17, 17, 0.526);
+    background-color: rgb(217, 217, 217);
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    min-width: 450px;
+    border-radius: 5px;
+}
+
+.newGameButton {
+    background-color: rgb(255, 145, 0);
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.title {
+    margin-top: 5vh;
+}
+
+#category {
+    margin-left: 2vw;
+    margin-top: 5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    color: white;
+}
+
+#wordSpace {
+    margin-top: 3vh;
+    margin-left: 2vw;
+}
+
+.hangmanImg {
+    width: 40%;
+    height: auto;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    position: absolute;
+}
+
+#img0 {
+   display: block;
+   z-index: 1;
+}
+
+#img1 {
+    display: none;
+    z-index: 2;
+}
+
+#img2 {
+    display: none;
+    z-index: 3;
+}
+
+#img3 {
+    display: none;
+    z-index: 4;
+}
+
+#img4 {
+    display: none;
+    z-index: 5;
+}
+
+#img5 {
+    display: none;
+    z-index: 6;
+}
+
+#img6 {
+    display: none;
+    z-index: 7;
+}
+
+#img7 {
+    display: none;
+    z-index: 8;
+}
+
+#img8 {
+    display: none;
+    z-index: 9;
+}
+
+.blankWordDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.letterDiv {
+    text-align: center;
+    border-bottom: solid 2px white;
+    width: 35px;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.spaceDiv {
+    width: 10px;
+}
+
+.mobileTitle {
+    display: none;
+}
+
+.imgContainer {
+    width: 40%;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .title {
+        width: 350px;
+        height: auto;
+    }
+
+    #endMsg {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    
+    #category {
+        margin-top: 3vh;
+    }
+
+    #endMsg {
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .title {
+        width: 300px;
+        height: auto;
+    }
+
+    #category {
+        font-size: 30px;
+    }
+
+    .letterDiv {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    #endMsg {
+        min-width: 400px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .letterBtns {
+        width: 40vw;
+    }
+
+    #endMsg {
+        margin-left: 50px;
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    
+    .letterBtn {
+        padding: 8px;
+        min-width: 25px;
+        font-size: 25px;
+    }
+
+    #wordSpace {
+        margin-top: 2vh;        
+    }
+
+    #endMsg {
+        min-width: 300px;
+        font-size: 20px;
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .title {
+        width: 250px;
+        height: auto;
+    }
+
+    #endMsg {
+        min-width: 300px;
+        font-size: 20px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    
+    #gameDiv {
+        display: grid;
+        grid-template-rows: 55% 45%;
+        grid-template-columns: 100%;
+        height: 100vh;
+        column-gap: 10px;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .mobileTitle {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 2vh;
+    }
+
+    .imgContainer {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .hangmanImg {
+        width: 60%;
+        margin-top: 2vh;
+        margin-left: 0;
+    }
+
+    .wordDiv {
+        grid-template-rows: 30% 70%;
+    }
+
+    #category {
+        font-size: 35px;
+        margin-top: 1vh;
+        margin-left: 10vw;
+    }
+
+    #wordSpace {
+        margin-top: 3vh;
+        margin-left: 10vw;
+    }
+
+    .letterDiv {
+        width: 30px;
+        height: 35px;
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+
+    .letterBtns {
+        width: 70vw;
+        margin-left: 10vw;
+    }
+
+    .letterBtn {
+        padding: 10px;
+        min-width: 35px;
+        font-size: 35px;
+    }
+
+    #endMsg {
+        width: 50%;
+        font-size: 25px;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+    #wordSpace {
+        margin-top: 1vh;
+        margin-left: 10vw;
+    }
+
+    .imgContainer {
+        width: 55%;
+    }
+
+    .hangmanImg {
+        width: 55%;
+    }
+
+    #endMsg {
+        width: 45%;
+        font-size: 20px;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .letterBtns {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #gameDiv {
+        grid-template-rows: 47% 53%;
+    }
+
+    .wordDiv {
+        grid-template-rows: 30% 70%;
+    }
+
+    .letterBtns {
+        width: 90vw;
+        margin-left: 5vw;
+        gap: 5px;
+    }
+
+    .imgContainer {
+        width: 75%;
+    }
+
+    .hangmanImg {
+        width: 75%;
+        margin-top: 1vh;
+    }
+
+    .mobileTitle {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 0;
+    }
+
+    #category {
+        font-size: 25px;
+        margin-top: 2vh;
+        margin-left: 5vw;
+    }
+
+    #wordSpace {
+        margin-top: 1vh;
+        margin-left: 5vw;
+    }
+
+    .letterBtn {
+        padding: 8px;
+        min-width: 25px;
+        font-size: 25px;
+    }
+
+    .letterDiv {
+        width: 25px;
+        height: 35px;
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+
+    #endMsg {
+        width: 65%;
+        min-width: 0;
+        font-size: 16px;
+        margin-left: 2%;
+        padding: 10px;
+    }
+
+    .newGameButton {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    #gameDiv {
+        grid-template-rows: 50% 50%;
+    }
+
+    #category {
+        font-size: 25px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .wordDiv {
+        grid-template-rows: 25% 75%;
+    }
+
+    .letterDiv {
+        width: 20px;
+        height: 30px;
+        font-size: 20px;
+        padding-bottom: 0;
+    }
+
+    .letterBtn {
+        padding: 8px;
+        min-width: 20px;
+        font-size: 20px;
+    }
+
+    .imgContainer {
+        width: 75%;
+    }
+
+    .hangmanImg {
+        height: 40vh;
+        width: auto;
+    }
+}
