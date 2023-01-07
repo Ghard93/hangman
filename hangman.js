@@ -15,7 +15,7 @@ function newGame() {
     if(wordsUsed.length === words.length) {
         wordsUsed = []
     }
-    console.log(words.length)
+ 
     let newWord
     
     do {
